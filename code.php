@@ -86,6 +86,38 @@ $query_insert2 = "INSERT INTO persone (nome, cognome, email)
 
 */
 
+/*
+
+//PREPARED:
+//2 FASI: PREPARE E EXECUTE
+//PREPARE: lo statement viene mandato al server che fa controllo sintassi e ottimizzazione query salvandola per dopo
+//EXECUTE: vengono mandati i valori, ripreso lo statement ed eseguito
+//Vantaggi: per lo statement eseguito ripetute volte con valori differenti. E' più veloce perche è parsato una volta sola, ottimo contro sql injection perhè i valori sono inviati direttamente al db con un protocollo diverso e sicuro.
+
+$sql_query = "INSERT INTO persone (nome, cognome, email) VALUES (? , ?, ?)";
+
+if($statement = $connessione->prepare($sql_query)){
+    $statement->bind_param("sss", $nome, $cognome, $email);
+
+    $nome = "Leopoldo";
+    $cognome = "Mare";
+    $email = "leopoldo.mare@gmail.com";
+    $statement->execute();
+
+    $nome = "Leonardo";
+    $cognome = "Moni";
+    $email = "leonardo.moni@gmail.com";
+    $statement->execute();
+
+    echo "Record inseriti con successo!";
+}else{
+    echo "Errore: non è possibile eseguire la query: $sql ".  $connessione->error;
+}
+
+$statement->close();
+
+*/
+
 $connessione->close();
 
 ?>
