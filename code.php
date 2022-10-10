@@ -168,6 +168,21 @@ if($connessione->query($query_update)===true){
 
 */
 
+/*
+
+//DELETE CON PHP
+
+$query_delete = "DELETE FROM persone WHERE id_persona = 14";
+
+if($connessione->query($query_delete)===true){
+    echo "Riga eliminata con successo";
+}else{
+    echo "Errore nell'eliminazione della riga: ". $connessione->error;
+}
+
+*/
+
+
 
 $connessione->close();
 
