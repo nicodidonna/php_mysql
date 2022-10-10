@@ -118,6 +118,43 @@ $statement->close();
 
 */
 
+/*
+
+//SELEZIONARE DATI CON SELECT
+
+$query_select = "SELECT * FROM persone";
+
+if($risultato = $connessione->query($query_select)){
+    if($risultato->num_rows > 0){
+        echo "<table>
+        <tr>
+        <th>Id_persona</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Email</th>
+        </tr>
+        ";
+        while($row = $risultato->fetch_array()){
+            echo "
+            <tr>
+            <td>" . $row['id_persona'] . "</td>
+            <td>" . $row['nome'] . "</td>
+            <td>" . $row['cognome'] . "</td>
+            <td>" . $row['email'] . "</td>
+            </tr>
+            ";
+        }
+        echo "</table>";
+    }else{
+        echo "Non ci sono righe per questa query";
+    }
+}else{
+    echo "Errore: impossibile eseguire la query $query_select ".$connessione->error;
+}
+
+*/
+
+
 $connessione->close();
 
 ?>
