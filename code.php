@@ -154,6 +154,20 @@ if($risultato = $connessione->query($query_select)){
 
 */
 
+/*
+
+//UPDATE CON PHP
+
+$query_update = "UPDATE persone set email= 'rossi.luca@gmail.com' WHERE id_persona = 8";
+
+if($connessione->query($query_update)===true){
+    echo "Riga aggiornata con successo";
+}else{
+    echo "Errore nella modifica della riga: ". $connessione->error;
+}
+
+*/
+
 
 $connessione->close();
 
