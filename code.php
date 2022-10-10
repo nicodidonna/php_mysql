@@ -120,9 +120,9 @@ $statement->close();
 
 /*
 
-//SELEZIONARE DATI CON SELECT
+//SELEZIONARE DATI CON SELECT - CONDIZIONI OR / AND , LIMIT, ORDER BY - (SQL)
 
-$query_select = "SELECT * FROM persone";
+$query_select = "SELECT * FROM persone ORDER BY id_persona ASC";
 
 if($risultato = $connessione->query($query_select)){
     if($risultato->num_rows > 0){
