@@ -17,13 +17,13 @@
 <h3>FORM DI INSERIMENTO RIGA NEL DATABASE</h3>
 
 
-<form action="code.php" method="POST">
+<form action="code.php" method="post">
     
 <p>
     <div class="row">
         <div class="form-group col-md-6">
-            <label for="nome" id="nome">Nome</label>
-            <input type="text" name="nome" id="nome"></input>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome"></input>
         </div>
     </div>
 </p>
@@ -31,8 +31,8 @@
 <p>
     <div class="row">
         <div class="form-group col-md-6">
-            <label for="cognome" id="cognome">Cognome</label>
-            <input type="text" name="cognome" id="cognome"></input>
+            <label for="cognome">Cognome</label>
+            <input type="text" name="cognome"></input>
         </div>
     </div>
 </p>
@@ -40,8 +40,8 @@
 <p>
     <div class="row">
         <div class="form-group col-md-6">
-            <label for="email" id="email">Email</label>
-            <input type="email" name="email" id="email"></input>
+            <label for="email">Email</label>
+            <input type="email" name="email"></input>
         </div>
     </div>
 </p>
@@ -51,7 +51,6 @@
 </form>
 
 </div>
-
 
 <script>
 window.__PUBLIC_PATH__ = './bootstrap-italia/fonts';
