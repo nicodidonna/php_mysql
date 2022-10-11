@@ -47,7 +47,7 @@ if($connessione->query($query_creazione_tabella) == true){
 
 /*
 
-//INSERT DI UNA RIGA IN UNA TABELLA TRAMIT PHP
+//INSERT DI UNA RIGA IN UNA TABELLA TRAMITE PHP
 
 $query_insert = "INSERT INTO persone (nome, cognome, email)
  VALUES 
@@ -69,9 +69,9 @@ if($connessione->query($query_insert) == true){
 
 //INSERIRE DATI IN TABELLA TRAMITE FORM HTML
 
-$nome = $connessione->real_escape_string($_POST['nome']);
-$cognome = $connessione->real_escape_string($_POST['cognome']);
-$email = $connessione->real_escape_string($_POST['email']);
+$nome = $connessione->real_escape_string($_REQUEST['nome']);
+$cognome = $connessione->real_escape_string($_REQUEST['cognome']);
+$email = $connessione->real_escape_string($_REQUEST['email']);
 
 $query_insert2 = "INSERT INTO persone (nome, cognome, email)
  VALUES 
@@ -85,6 +85,16 @@ $query_insert2 = "INSERT INTO persone (nome, cognome, email)
 }
 
 */
+
+?>
+
+<body>
+    <a href="index.php">
+        <button class="btn btn-primary btn-me" type="button" >Torna al form</button>
+    </a>
+</body>
+
+<?php
 
 /*
 
