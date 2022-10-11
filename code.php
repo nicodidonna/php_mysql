@@ -86,16 +86,6 @@ $query_insert2 = "INSERT INTO persone (nome, cognome, email)
 
 */
 
-?>
-
-<body>
-    <a href="index.php">
-        <button class="btn btn-primary btn-me" type="button" >Torna al form</button>
-    </a>
-</body>
-
-<?php
-
 /*
 
 //PREPARED:
@@ -192,8 +182,13 @@ if($connessione->query($query_delete)===true){
 
 */
 
-
-
 $connessione->close();
 
 ?>
+
+<br>
+<body>
+    <a href="index.php">
+        <button class="btn btn-primary btn-me" type="button" >Torna al form</button>
+    </a>
+</body>
